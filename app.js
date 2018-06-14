@@ -6,7 +6,6 @@ const router = require('koa-router')()
 const koajwt = require('koa-jwt')
 const mongoose = require('mongoose')
 
-const adminRoute = require('./routes/admin')
 const usersRoute = require('./routes/users')
 global.Config = require('./config')
 
@@ -20,8 +19,6 @@ router
   .get('/hello', (ctx, next) => {
     ctx.body = 'hello world!'
   })
-
-  .post('/admin/login', adminRoute.login)
   .post('/users/register', usersRoute.register)
   .post('/users/login', usersRoute.login)
   .get('/users', usersRoute.list)
