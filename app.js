@@ -35,7 +35,6 @@ app
     method: 'OPTIONS',
     path: [
       /^\/hello/,
-      /^\/admin\/login/,
       /^\/users\/register/,
       /^\/users\/login/,
     ]
